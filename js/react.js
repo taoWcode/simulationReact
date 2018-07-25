@@ -18,7 +18,8 @@ var component = {
 	},
 	render:function(){
 		var _t = this;
-		var template = `<div>Hello,world!</div>`;
+		var template = `<div>Hello,${_t.data.name}!</div>`;
 		_t.root.innerHTML = template;
 	}
 };
+component.render();
