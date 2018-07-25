@@ -21,6 +21,19 @@ var component = {
 		var _t = this;
 		var template = `<div>Hello,${_t.data.name}!</div>`;
 		_t.root.innerHTML = template;
+	},
+	start:function(){
+		var _t = this;
+		_t.ready();
+		_t.render();
+	},
+	ready:function(){
+		var _t = this;
+
+		setTimeout(function(){
+			_t.setData('name','React');
+		},2000)
 	}
 };
-component.setData('name',"张三");
+component.start();
+//component.setData('name',"张三");
