@@ -14,7 +14,8 @@ var component = {
 	},
 	setData:function(key, val){
 		var _t = this;
-		_t.date[key] = val;
+		_t.data[key] = val;
+		_t.render();
 	},
 	render:function(){
 		var _t = this;
@@ -22,4 +23,4 @@ var component = {
 		_t.root.innerHTML = template;
 	}
 };
-component.render();
+component.setData('name',"张三");
